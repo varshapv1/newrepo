@@ -11,8 +11,8 @@ provider "azurerm" {
   features{}
 }
 #variable "newgroup" {
-# type = list
-#  default = ["testgroup", "demogroup", "dummygroup" ]
+ #type = list
+  #default = ["testgroup", "demogroup", "dummygroup" ]
 #} 
 resource "azurerm_resource_group" "Mygroup" {
   for_each = toset(["testgroup", "demogroup", "dummygroup"])
